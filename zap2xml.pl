@@ -433,11 +433,11 @@ sub stationToChannel {
   if (defined($options{z})) {
     return sprintf("I%s.%s.tvguide.com", $stations{$s}{number},$stations{$s}{stnNum});
   } elsif (defined($options{O})) {
-    return sprintf("C%s%s.gracenote.com",$stations{$s}{number},lc($stations{$s}{name}));
+    return sprintf("C%s%s.zap2it.com",$stations{$s}{number},lc($stations{$s}{name}));
   } elsif (defined($options{9})) {
-    return sprintf("I%s.labs.gracenote.com",$stations{$s}{stnNum});
+    return sprintf("I%s.labs.zap2it.com",$stations{$s}{stnNum});
   }
-  return sprintf("I%s.%s.gracenote.com", $stations{$s}{number},$stations{$s}{stnNum});
+  return sprintf("I%s.%s.zap2it.com", $stations{$s}{number},$stations{$s}{stnNum});
 }
 
 sub sortChan {
@@ -471,7 +471,7 @@ sub printHeader {
   if (defined($options{z})) {
     print $FH "<tv source-info-url=\"http://tvguide.com/\" source-info-name=\"tvguide.com\"";
   } else {
-    print $FH "<tv source-info-url=\"http://tvlistings.gracenote.com/\" source-info-name=\"gracenote.com\"";
+    print $FH "<tv source-info-url=\"http://tvlistings.zap2it.com/\" source-info-name=\"zap2it.com\"";
   }
   print $FH " generator-info-name=\"zap2xml\" generator-info-url=\"zap2xml\@gmail.com\">\n";
 }
